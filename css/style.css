@@ -54,7 +54,30 @@
     color: white;
     text-align: center;
   }
-  
+
   body{
     background-color: #52057B;
+  }
+  
+  /*about page*/
+  .section1 {
+    background-color: #892CDC;
+    padding: 20px;
+    margin-top: 60px;
+  }
+  
+   .card {
+    background-color: #000; 
+    color: #fff; 
+    padding: 50px;
+    border: 1px solid #333; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    margin: 30px auto;
+    width: 500px;
+    height: 400px;
+  } 
+ 
+  #card{
+    background-color: #000;
+    color:white
   }
