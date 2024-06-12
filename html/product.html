@@ -10,14 +10,79 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
+    <style>
+         main {
+        margin-top: 10%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 70px;
+        background-color: #892CDC ;
+        
+    }
+    p{
+        color: white;
+        display:none
+    }
+
+    .show{
+        display: block;
+    }
+
+    h4{
+        color: white;
+    }
+     .images{
+        height: 350px;
+        width: 325px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    
+        
+        
+     }
+     section {
+        width: 350px;
+        height: 590px;
+        background-color: #000;
+  
+        
+    }
+    
+    #sort-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#sort-button:hover {
+  background-color: #892CDC;
+}
+ body{
+    font-family: Roboto;
+ }
+      </style>
 
 <body>
     <nav class="navbar navbar-custom fixed-top">
         <div class="container-fluid">
             <a href="#">
                 <img src="https://jords-springy.github.io/hostedimages/images/juju_logo.png" loading="lazy"
-                    style="height: 70px; border-color: black;" alt="main logo">
-            </a>
+                    style="height: 70px; border-color: black;" alt="main logo"> 
+                    </a>
+                <button class="btn btn-sm btn-primary" id="sort-button">Sort : Lowest To Highest Price</button>
+                <button id="cart-button">Cart</button>
+                <form class="search-form">
+                    <input type="search" id="search-input" placeholder="Search...">
+                    <button class="search-button">
+                        <svg viewBox="0 0 1024 1024">
+                            <path d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path>
+                        </svg>
+                    </button>
+                </form>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,10 +124,9 @@
         </div>
     </nav>
 
+<main>
 
-    <div class="section1" style=" min-height: 850px; ">
-            </div>
-    
+    </main>
 
     <div class="footer" style="max-height: 100px;">
         <div class="row">
@@ -79,7 +143,7 @@
         </div>
     </div>
 
-    <script src="./script/product.js"></script>
+    <script src="/script/product.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
