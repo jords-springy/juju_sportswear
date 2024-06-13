@@ -22,4 +22,4 @@ products.forEach((product) => {
         </td>
       </tr>
     `;
-  });
+  });    
