@@ -73,7 +73,7 @@ function createProduct(name, category, imageUrl, description, quantity, price) {
       let [product] = products.filter((object) => object.id === +id);
       cartItems.push(product);
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      alert("This item is added to your cart");
+      alert("Thank you for purchasing");
     
       updateCartCount();
     }
