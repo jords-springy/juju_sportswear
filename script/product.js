@@ -8,17 +8,17 @@ function createProduct(name, category, imageUrl, description, quantity, price) {
     this.id = Math.random().toString(36).substr(2, 9);
   }
   
-  let product1 = new createProduct("Men's Graphic Tracksuit", "Men's Sportswear", "https://jords-springy.github.io/hostedimages/images/mens_tracksuit.png",1, "Show your love to the league by suiting up with the Brooklyn Nets Tracksuit. Classic graphics over lightweight and breathable fabric make it a go-to layer for hoopers. With its relaxed fit, it easily layers over your gear.", 1, 2199.99);
+  let product1 = new createProduct("Men's Graphic Tracksuit", "Men's Sportswear", "https://jords-springy.github.io/hostedimages/images/mens_tracksuit.png", "Show your love to the league by suiting up with the Brooklyn Nets Tracksuit. Classic graphics over lightweight and breathable fabric make it a go-to layer for hoopers. With its relaxed fit, it easily layers over your gear.",1, 2199.99);
   
-  let product2 = new createProduct("Men's Road Running Shoes", "Men's Sportswear", "https://jords-springy.github.io/hostedimages/images/mens_nikewin.png",1, "Experience energy return with a combination of Cushlon 3.0 foam and a full-length Nike Air unit in the midsole. Plus, an elastic midfoot band and a spacious forefoot provide an accommodating, comfortable fit.", 1, 2299.99);
+  let product2 = new createProduct("Men's Road Running Shoes", "Men's Sportswear", "https://jords-springy.github.io/hostedimages/images/mens_nikewin.png", "Experience energy return with a combination of Cushlon 3.0 foam and a full-length Nike Air unit in the midsole. Plus, an elastic midfoot band and a spacious forefoot provide an accommodating, comfortable fit.",1, 2299.99);
   
-  let product3 = new createProduct("Men's Running Shoes", "Men's Sportswear", "https://jords-springy.github.io/hostedimages/images/mens_nikeflex.png",1, "The Max Air cushioning offers comfortable stability for lifting whether it's a light or heavy day. A wide, flat base gives you enhanced stability and grip for all kinds of tough workouts without sacrificing style, as you roam from station to station and set to set.", 1, 1699.99);
+  let product3 = new createProduct("Men's Running Shoes", "Men's Sportswear", "https://jords-springy.github.io/hostedimages/images/mens_nikeflex.png", "The Max Air cushioning offers comfortable stability for lifting whether it's a light or heavy day. A wide, flat base gives you enhanced stability and grip for all kinds of tough workouts without sacrificing style, as you roam from station to station and set to set.",1, 1699.99);
   
-  let product4 = new createProduct("Women's Tracksuit", "Women's Sportswear", "https://jords-springy.github.io/hostedimages/images/womens_tracksuit.jpg",1, "Everyone needs a track suit they can count on for everyday life — work-from-home days, weekend nights and everything in between.It has all the details you're after, like a ribbed hem and cuffs, an elastic waist and a full zip for layering your favourite tee underneath.", 1, 1799.99);
+  let product4 = new createProduct("Women's Tracksuit", "Women's Sportswear", "https://jords-springy.github.io/hostedimages/images/womens_tracksuit.jpg", "Everyone needs a track suit they can count on for everyday life — work-from-home days, weekend nights and everything in between.It has all the details you're after, like a ribbed hem and cuffs, an elastic waist and a full zip for layering your favourite tee underneath.",1, 1799.99);
   
-  let product5 = new createProduct("Women's Running Shoes", "Women's Sportswear", "https://jords-springy.github.io/hostedimages/images/womens_nikerev.png",1, "Stylish as ever, comfortable when the rubber meets the road and performance-driven for your desired pace, it's an evolution of a fan favourite that offers a soft, smooth ride.", 1, 375.99);
+  let product5 = new createProduct("Women's Running Shoes", "Women's Sportswear", "https://jords-springy.github.io/hostedimages/images/womens_nikerev.png", "Stylish as ever, comfortable when the rubber meets the road and performance-driven for your desired pace, it's an evolution of a fan favourite that offers a soft, smooth ride.",1,  375.99);
   
-  let product6 = new createProduct("Women's Road Running Shoes", "Women's Sportswear", "https://jords-springy.github.io/hostedimages/images/womens_nikezoom.png",1, "Designed for quick bursts of force, heart-thumping tempo changes and fast-paced workouts, this shoe helps push you to fresh HIIT heights.", 1, 429.99);
+  let product6 = new createProduct("Women's Road Running Shoes", "Women's Sportswear", "https://jords-springy.github.io/hostedimages/images/womens_nikezoom.png", "Designed for quick bursts of force, heart-thumping tempo changes and fast-paced workouts, this shoe helps push you to fresh HIIT heights.",1, 429.99);
   
   let products = [product1, product2, product3, product4, product5, product6];
   
@@ -35,7 +35,7 @@ function createProduct(name, category, imageUrl, description, quantity, price) {
         <p>Price: R${product.price}</p>
         <p class="description">${product.description}</p>
         <br>
-        <button class="addToCart" value='${product.id}'>Add to Cart (0)</button>
+        <button class="addToCart" value='${product.id}'>Add to Cart</button>
         <button class="viewMore">Description</button>
         <button class="price">Price</button>
       </section>
@@ -109,7 +109,7 @@ function createProduct(name, category, imageUrl, description, quantity, price) {
             <p>Price: R${product.price}</p>
             <p class="description">${product.description}</p>
             <br>
-            <button class="addToCart" value='${product.id}'>Add to Cart (0)</button>
+            <button class="addToCart" value='${product.id}'>Add to Cart</button>
             <button class="viewMore">Description</button>
             <button class="price">Price</button>
           </section>
@@ -154,7 +154,7 @@ function createProduct(name, category, imageUrl, description, quantity, price) {
             <p>Price: R${product.price}</p>
             <p class="description">${product.description}</p>
             <br>
-            <button class="addToCart" value='${product.id}'>Add to Cart (0)</button>
+            <button class="addToCart" value='${product.id}'>Add to Cart</button>
             <button class="viewMore">Description</button>
             <button class="price">Price</button>
           </section>
