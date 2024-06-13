@@ -71,12 +71,12 @@ function createProduct(id,name, category, imageUrl, description, quantity, price
     
     function addToCart(id) {
       let product = products.filter((object) => object.id === id);
-      cartItems.push(product);
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      alert("Thank you for purchasing");
-    
-      // updateCartCount();
-    }
+     cartItems.push(product);
+     localStorage.setItem("cartItems", JSON.stringify(cartItems));
+     alert("Thank you for purchasing");
+   
+     // updateCartCount();
+   }
     
     // function updateCartCount() {
     //   const cartCountElement = document.getElementById("cart-count");

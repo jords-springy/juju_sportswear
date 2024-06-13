@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -28,10 +28,39 @@
         display: block;
     }
 
-   h4{
-    color: white;
-   }
-   
+    h4{
+        color: white;
+    }
+     .images{
+        height: 350px;
+        width: 325px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    
+        
+        
+     }
+     section {
+        width: 350px;
+        height: 590px;
+        background-color: #000;
+  
+        
+    }
+    
+    #sort-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#sort-button:hover {
+  background-color: #892CDC;
+}
  body{
     font-family: Roboto;
  }
@@ -47,7 +76,7 @@
                     style="height: 70px; border-color: black;" alt="main logo"> 
                     </a>
                 <button class="btn btn-sm btn-primary" id="sort-button">Sort : Lowest To Highest Price</button>
-                <button id="cart-button"><a href="/html/checkout.html" class="cart_btn">Cart</a></button>
+                <button id="cart-button"><a href="../html/checkout.html">Cart</a></button>
                 <form class="search-form">
                     <input type="search" id="search-input" placeholder="Search...">
                     <button class="search-button">
@@ -108,7 +137,7 @@
                     loading="lazy" style="height: 70px;  border-color: black;">
             </div>
             <div class="col-md-2" style="padding-top: 20px;">
-                <p class="copyright">© Copyright of JUJU SPORTSWEAR - 2024</p>
+                <p>© Copyright of JUJU SPORTSWEAR - 2024</p>
             </div>
 
 
@@ -116,7 +145,7 @@
         </div>
     </div>
 
-    <script src="/script/product.js"></script>
+    <script src="../script/product.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
