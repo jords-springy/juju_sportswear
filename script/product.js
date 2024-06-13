@@ -84,7 +84,7 @@ function addToCart(id) {
       cartItems.push(product);
     }
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    alert("Thank you for purchasing");
+    alert("Item is added to your cart");
   } else {
     console.log('Product not found');
   }
