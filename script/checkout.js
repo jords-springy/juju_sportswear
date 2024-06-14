@@ -6,31 +6,31 @@ let products = JSON.parse(localStorage.getItem("cartItems"));
 let cartItemsFinal = []
 let grandTotal = 0
 products.forEach((product) => {
-    // console.log(product.name);
-    // console.log(product.category);
-    // console.log(cartItemsFinal);
-    if (cartItemsFinal.length > 0) {
-      // console.log(product);
-      item = cartItemsFinal.find((object) => object.id === product.id);
-      if (item === undefined || item == null) {
-        console.log('push');
-        cartItemsFinal.push(product);
-      }
-      else {
-        console.log('inc');
-        item.quantity += 1;
-        console.log(cartItemsFinal);
+  // console.log(product.name);
+  // console.log(product.category);
+  // console.log(cartItemsFinal);
+  if (cartItemsFinal.length > 0) {
+    // console.log(product);
+    item = cartItemsFinal.find((object) => object.id === product.id);
+    if (item === undefined || item == null) {
+      console.log('push');
+      cartItemsFinal.push(product);
     }
-}
-else {
-  cartItemsFinal.push(product);
-  console.log('init')
-}
+    else {
+      console.log('inc');
+      item.quantity += 1;
+      console.log(cartItemsFinal);
+    }
+  }
+  else {
+    cartItemsFinal.push(product);
+    console.log('init')
+  }
 });
 cartItemsFinal.forEach((cartItem) => {
-itemTotal = cartItem.price * cartItem.quantity;
-grandTotal += itemTotal;
-mainContent.innerHTML += `
+  itemTotal = cartItem.price * cartItem.quantity;
+  grandTotal += itemTotal;
+  mainContent.innerHTML += `
     <tr>
     <td>
     <p>${cartItem.name}</p>
@@ -56,7 +56,7 @@ mainContent.innerHTML += `
   `;
 });
 if (grandTotal > 0) {
-mainContent.innerHTML += '<h4>Total: ' + grandTotal.toFixed(2) +'</h4>';
+  mainContent.innerHTML += '<h4>Total: ' + grandTotal.toFixed(2) + '</h4>';
 }
 mainContent.innerHTML += `
 <button id="purchaseButton">Purchase</button>
@@ -66,7 +66,7 @@ mainContent.innerHTML += `
 `;
 let purchaseButton = document.getElementById("purchaseButton");
 purchaseButton.addEventListener("click", () => {
-alert("Thank you for purchasing");
+  alert("Thank you for purchasing");
 });
 let clearButton = document.getElementById("clearButton");
 clearButton.addEventListener("click", () => {

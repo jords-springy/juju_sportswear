@@ -25,7 +25,7 @@ let products = [product1, product2, product3, product4, product5, product6];
 localStorage.setItem('products', JSON.stringify(products));
 
 let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-console.log('cartItems from localStorage:', localStorage.getItem('cartItems')); 
+console.log('cartItems from localStorage:', localStorage.getItem('cartItems'));
 
 let mainContent = document.querySelector('main');
 
@@ -135,7 +135,7 @@ function addToCart(id) {
   console.log('Products:', products);
   let product = products.find((object) => object.id === parseInt(id));
   console.log('Found product:', product);
-  console.log('cartItems before adding:', cartItems); 
+  console.log('cartItems before adding:', cartItems);
   if (product) {
     if (cartItems.length === 0) {
       cartItems = [product];
@@ -162,8 +162,8 @@ searchInput.addEventListener('input', (event) => {
   const searchTerm = event.target.value.toLowerCase();
   const filteredProducts = products.filter((product) => {
     return product.name.toLowerCase().includes(searchTerm) ||
-           product.category.toLowerCase().includes(searchTerm) ||
-           product.description.toLowerCase().includes(searchTerm);
+      product.category.toLowerCase().includes(searchTerm) ||
+      product.description.toLowerCase().includes(searchTerm);
   });
 
   mainContent.innerHTML = '';
