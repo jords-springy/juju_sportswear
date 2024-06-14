@@ -388,6 +388,13 @@ h4 {
   }
 }
 
+@media (min-width: 300px) and (max-width: 800px) {
+  body {
+    background-color: #892CDC;
+    color: white;
+  }
+}
+
 /* For Tablet View */
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .gfg-div {
@@ -459,3 +466,17 @@ h4 {
 }
 
 ;
+
+.product-image {
+  max-width: 100px; /* adjust the value to your desired width */
+  height: auto;
+}
+
+#sort-btn{
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
