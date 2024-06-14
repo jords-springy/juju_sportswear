@@ -29,47 +29,106 @@ console.log('cartItems from localStorage:', localStorage.getItem('cartItems')); 
 
 let mainContent = document.querySelector('main');
 
-products.forEach((product) => {
-  mainContent.innerHTML += `
-    <section>
-      <img src="${product.imageUrl}" class="images" align="center">
-      <h4 align="center">${product.name}</h4>
-      <p>Price: R${product.price}</p>
-      <p class="description">${product.description}</p>
-      <br>
-      <button class="addToCart" value='${product.id}'>Add to Cart</button>
-      <button class="viewMore">Description</button>
-      <button class="price">Price</button>
-    </section>
-  `;
-});
+let filterButton = document.getElementById('filter-button');
+let categorySelect = document.getElementById('category-select');
 
-products.forEach((product, index) => {
-  const section = document.querySelectorAll('section')[index];
-  const viewMoreButton = section.querySelector('.viewMore');
-  const description = section.querySelector('.description');
-  const priceButton = section.querySelector('.price');
+filterButton.addEventListener('click', filterProductsByCategory);
 
-  viewMoreButton.addEventListener('click', () => {
-    description.classList.toggle('show');
+function filterProductsByCategory() {
+  const selectedCategory = categorySelect.value;
+
+  const filteredProducts = products.filter((product) => {
+    return product.category === selectedCategory;
   });
 
-  priceButton.addEventListener('click', () => {
-    const price = section.querySelector('p');
-    price.classList.toggle('show');
+  mainContent.innerHTML = '';
+  filteredProducts.forEach((product) => {
+    mainContent.innerHTML += `
+      <section>
+        <img src="${product.imageUrl}" class="images" align="center">
+        <h4 align="center">${product.name}</h4>
+        <p>Price: R${product.price}</p>
+        <p class="description">${product.description}</p>
+        <br>
+        <button class="addToCart" value='${product.id}'>Add to Cart</button>
+        <button class="viewMore">Description</button>
+        <button class="price">Price</button>
+      </section>
+    `;
   });
-});
 
-let addToCartButtons = document.querySelectorAll('.addToCart');
+  const viewMoreButtons = document.querySelectorAll('.viewMore');
+  const addToCartButtons = document.querySelectorAll('.addToCart');
+  const priceButtons = document.querySelectorAll('.price');
 
-addToCartButtons.forEach((button) => {
-  let quantity = 0;
-  button.addEventListener('click', (event) => {
-    addToCart(event.target.value);
-    quantity++;
-    button.innerText = `Add to Cart (${quantity})`;
+  viewMoreButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const description = button.parentNode.querySelector('.description');
+      description.classList.toggle('show');
+    });
   });
-});
+
+  addToCartButtons.forEach((button) => {
+    let quantity = 0;
+    button.addEventListener('click', (event) => {
+      addToCart(event.target.value);
+      quantity++;
+      button.innerText = `Add to Cart (${quantity})`;
+    });
+  });
+
+  priceButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const price = button.parentNode.querySelector('p');
+      price.classList.toggle('show');
+    });
+  });
+}
+
+function displayProducts() {
+  mainContent.innerHTML = '';
+  products.forEach((product) => {
+    mainContent.innerHTML += `
+      <section>
+        <img src="${product.imageUrl}" class="images" align="center">
+        <h4 align="center">${product.name}</h4>
+        <p>Price: R${product.price}</p>
+        <p class="description">${product.description}</p>
+        <br>
+        <button class="addToCart" value='${product.id}'>Add to Cart</button>
+        <button class="viewMore">Description</button>
+        <button class="price">Price</button>
+      </section>
+    `;
+  });
+
+  const viewMoreButtons = document.querySelectorAll('.viewMore');
+  const addToCartButtons = document.querySelectorAll('.addToCart');
+  const priceButtons = document.querySelectorAll('.price');
+
+  viewMoreButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const description = button.parentNode.querySelector('.description');
+      description.classList.toggle('show');
+    });
+  });
+
+  addToCartButtons.forEach((button) => {
+    let quantity = 0;
+    button.addEventListener('click', (event) => {
+      addToCart(event.target.value);
+      quantity++;
+      button.innerText = `Add to Cart (${quantity})`;
+    });
+  });
+
+  priceButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const price = button.parentNode.querySelector('p');
+      price.classList.toggle('show');
+    });
+  });
+}
 
 function addToCart(id) {
   console.log('Adding to cart:', id);
@@ -150,50 +209,5 @@ searchInput.addEventListener('input', (event) => {
     });
   });
 });
-
-function displayProducts() {
-  mainContent.innerHTML = '';
-  products.forEach((product) => {
-    mainContent.innerHTML += `
-      <section>
-        <img src="${product.imageUrl}" class="images" align="center">
-        <h4 align="center">${product.name}</h4>
-        <p>Price: R${product.price}</p>
-        <p class="description">${product.description}</p>
-        <br>
-        <button class="addToCart" value='${product.id}'>Add to Cart</button>
-        <button class="viewMore">Description</button>
-        <button class="price">Price</button>
-      </section>
-    `;
-  });
-
-  const viewMoreButtons = document.querySelectorAll('.viewMore');
-  const addToCartButtons = document.querySelectorAll('.addToCart');
-  const priceButtons = document.querySelectorAll('.price');
-
-  viewMoreButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const description = button.parentNode.querySelector('.description');
-      description.classList.toggle('show');
-    });
-  });
-
-  addToCartButtons.forEach((button) => {
-    let quantity = 0;
-    button.addEventListener('click', (event) => {
-      addToCart(event.target.value);
-      quantity++;
-      button.innerText = `Add to Cart (${quantity})`;
-    });
-  });
-
-  priceButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const price = button.parentNode.querySelector('p');
-      price.classList.toggle('show');
-    });
-  });
-}
 
 displayProducts();
