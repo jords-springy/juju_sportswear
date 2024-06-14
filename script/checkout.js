@@ -75,11 +75,17 @@ clearButton.addEventListener("click", () => {
 });
 const removeFromCartButtons = document.querySelectorAll('.removeFromCart');
 removeFromCartButtons.forEach((button) => {
-let quantity = 0;
-button.addEventListener('click', (event) => {
-removeFromCart(event.target.value);
+  button.addEventListener('click', (event) => {
+    removeFromCart(event.target.value);
+  });
 });
-});
-function removeFromCart() {
-console.log('To do ');
-};
+
+function removeFromCart(productId) {
+  let products = JSON.parse(localStorage.getItem("cartItems"));
+  let index = products.findIndex((product) => product.id === parseInt(productId));
+  if (index !== -1) {
+    products.splice(index, 1);
+    localStorage.setItem("cartItems", JSON.stringify(products));
+    location.reload();
+  }
+}
