@@ -39,7 +39,7 @@ cartItemsFinal.forEach((cartItem) => {
     <p>${cartItem.category}</p>
     </td>
     <td>
-    <p>${cartItem.price}</p>
+    <p>R${cartItem.price}</p>
     </td>
     <td>
     <p>${cartItem.quantity}</p>
