@@ -387,81 +387,75 @@ h4 {
     color: white;
   }
 }
-  /* For Tablet View */
-  @media screen and (min-device-width: 768px) 
-  and (max-device-width: 1024px) {
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .gfg-div {
-      width: 400px;
-      height: 400px;
-      background-color: #892CDC;
-      color: white;
+    width: 400px;
+    height: 400px;
+    background-color: #892CDC;
+    color: white;
   }
-  }
-  
-  /*Mobile Portrait View */
-  @media screen and (max-device-width: 480px) 
-  and (orientation: portrait) {
+}
+
+/*Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
   .gfg-div {
-      width: 200px;
-      height: 200px;
-      background-color: #892CDC;
-      color: white;
+    width: 200px;
+    height: 200px;
+    background-color: #892CDC;
+    color: white;
   }
-  }
-  
-  /*Mobile Landscape View */
-  @media screen and (max-device-width: 640px) 
-  and (orientation: landscape) {
+}
+
+/*Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
   .gfg-div {
-      width: 400px;
-      height: 200px;
-      background-color: #892CDC;
-      color: white;
+    width: 400px;
+    height: 200px;
+    background-color: #892CDC;
+    color: white;
   }
-  }
-  
-  /* Mobile Phones Portrait or Landscape View */
-  @media screen
-  and (max-device-width: 640px) {
+}
+
+/* Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
   .gfg-div {
-      width: 400px;
-      height: 200px;
-      background-color: #892CDC;
-      color: white;
+    width: 400px;
+    height: 200px;
+    background-color: #892CDC;
+    color: white;
   }
-  }
-  
-  /* iPhone 4 Portrait or Landscape View */
-  @media screen and (min-device-width: 320px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
   .gfg-div {
-      width: 400px;
-      height: 400px;
-      background-color: #892CDC;
-      color: white;
+    width: 400px;
+    height: 400px;
+    background-color: #892CDC;
+    color: white;
   }
-  }
-  
-  /*iPhone 5 Portrait or Landscape View */
-  @media (device-height: 568px) 
-  and (device-width: 320px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/*iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
   .gfg-div {
-      width: 400px;
-      height: 400px;
-      background-color:#892CDC ;
-      color: white;
+    width: 400px;
+    height: 400px;
+    background-color: #892CDC;
+    color: white;
   }
-  }
-  
-  /* iPhone 6 and 6 plus Portrait or Landscape View */
-  @media (min-device-height: 667px) 
-  and (min-device-width: 375px) 
-  and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
   .gfg-div {
-      width: 400px;
-      height: 400px;
-      background-color: #892CDC;
-      color: white;
+    width: 400px;
+    height: 400px;
+    background-color: #892CDC;
+    color: white;
   }
-  };
+}
+
+;
