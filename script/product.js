@@ -131,21 +131,26 @@ function displayProducts() {
 }
 
 function addToCart(id) {
-  console.log('Adding to cart:', id);
-  console.log('Products:', products);
-  let product = products.find((object) => object.id === parseInt(id));
-  console.log('Found product:', product);
-  console.log('cartItems before adding:', cartItems);
-  if (product) {
-    if (cartItems.length === 0) {
-      cartItems = [product];
+  try {
+    console.log('Adding to cart:', id);
+    console.log('Products:', products);
+    let product = products.find((object) => object.id === parseInt(id));
+    console.log('Found product:', product);
+    console.log('cartItems before adding:', cartItems);
+    if (product) {
+      if (cartItems.length === 0) {
+        cartItems = [product];
+      } else {
+        cartItems.push(product);
+      }
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      alert("Item is added to your cart");
     } else {
-      cartItems.push(product);
+      throw new Error("Product not found");
     }
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    alert("Item is added to your cart");
-  } else {
-    console.log('Product not found');
+  } catch (error) {
+    console.error("Error adding to cart:", error);
+    alert("Error adding to cart. Please try again.");
   }
 }
 

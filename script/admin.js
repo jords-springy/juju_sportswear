@@ -1,3 +1,4 @@
+
 let products = JSON.parse(localStorage.getItem("products")) || [];
 let tbody = document.querySelector('tbody');
 let sortButton = document.querySelector('#sort-btn'); 
@@ -66,3 +67,13 @@ sortButton.addEventListener('click', () => {
 });
 
 adminProducts();
+
+
+
+
+
+
+
+
+
+
