@@ -25,7 +25,7 @@ let products = [product1, product2, product3, product4, product5, product6];
 localStorage.setItem('products', JSON.stringify(products));
 
 let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-console.log('cartItems from localStorage:', localStorage.getItem('cartItems')); // Add this line
+console.log('cartItems from localStorage:', localStorage.getItem('cartItems')); 
 
 let mainContent = document.querySelector('main');
 
@@ -135,7 +135,7 @@ function addToCart(id) {
   console.log('Products:', products);
   let product = products.find((object) => object.id === parseInt(id));
   console.log('Found product:', product);
-  console.log('cartItems before adding:', cartItems); // Add this line
+  console.log('cartItems before adding:', cartItems); 
   if (product) {
     if (cartItems.length === 0) {
       cartItems = [product];
@@ -211,3 +211,13 @@ searchInput.addEventListener('input', (event) => {
 });
 
 displayProducts();
+var myVar;
+
+function myLoader() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function loadPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
