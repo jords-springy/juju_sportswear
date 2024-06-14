@@ -45,7 +45,7 @@ cartItemsFinal.forEach((cartItem) => {
     <p>${cartItem.quantity}</p>
     </td>
     <td>
-    <p>${itemTotal} </p>
+    <p>R${itemTotal} </p>
     </td>
     <td>
     <button class="removeFromCart" value='${cartItem.id}'>Delete</button>
@@ -56,7 +56,7 @@ cartItemsFinal.forEach((cartItem) => {
   `;
 });
 if (grandTotal > 0) {
-  mainContent.innerHTML += '<h4>Total: ' + grandTotal.toFixed(2) + '</h4>';
+  mainContent.innerHTML += '<h4>Total:R ' + grandTotal.toFixed(2) + '</h4>';
 }
 mainContent.innerHTML += `
 <button id="purchaseButton">Purchase</button>
