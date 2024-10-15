@@ -137,6 +137,7 @@ function addToCart(id) {
     let product = products.find((object) => object.id === parseInt(id));
     console.log('Found product:', product);
     console.log('cartItems before adding:', cartItems);
+    
     if (product) {
       if (cartItems.length === 0) {
         cartItems = [product];
@@ -144,15 +145,34 @@ function addToCart(id) {
         cartItems.push(product);
       }
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      alert("Item is added to your cart");
+      
+      // Use Toastify for notifications
+      Toastify({
+        text: "Item added to your cart!",
+        duration: 3000, // duration in milliseconds
+        close: true, // enable close button
+        gravity: "top", // top or bottom
+        position: 'right', // left, center or right
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)", // background color
+      }).showToast();
     } else {
       throw new Error("Product not found");
     }
   } catch (error) {
     console.error("Error adding to cart:", error);
-    alert("Error adding to cart. Please try again.");
+    
+    // Use Toastify for error notifications
+    Toastify({
+      text: "Error adding to cart. Please try again.",
+      duration: 3000,
+      close: true,
+      gravity: "top",
+      position: 'right',
+      backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
+    }).showToast();
   }
 }
+
 
 const sortButton = document.getElementById('sort-button');
 

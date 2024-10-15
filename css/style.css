@@ -7,12 +7,145 @@
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
   color: white;
+  text-align: center;
 }
 
 .navbar-custom a:hover {
   color: #52057B;
 }
 
+.delete-btn {
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  border: 2px solid purple; /* Purple border */
+  padding: 10px 20px; /* Padding for size */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
+  cursor: pointer; /* Pointer on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  text-decoration: none; /* No underline for links */
+}
+
+/* Hover effect */
+.delete-btn:hover {
+  background-color: purple; /* Change background to purple */
+  color: white; /* Keep text white */
+}
+
+/* Active effect */
+.delete-btn:active {
+  background-color: white; /* Change background to white */
+  color: black; /* Change text to black */
+  transform: scale(0.95); /* Slightly reduce size on click */
+}
+
+.addToCart {
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  border: 2px solid purple; /* Purple border */
+  padding: 5px 10px; /* Padding for size */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
+  cursor: pointer; /* Pointer on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  text-decoration: none; /* No underline for links */
+}
+
+/* Hover effect */
+.addToCart:hover {
+  background-color: purple; /* Change background to purple */
+  color: white; /* Keep text white */
+}
+
+/* Active effect */
+.addToCart:active {
+  background-color: white; /* Change background to white */
+  color: black; /* Change text to black */
+  transform: scale(0.95); /* Slightly reduce size on click */
+}
+
+.viewMore {
+  background-color: #6a0dad; /* Purple background */
+  color: white; /* White text */
+  border: 2px solid #6a0dad; /* Same purple border */
+  padding: 5px 10px; /* Padding for size */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
+  cursor: pointer; /* Pointer on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Hover effect */
+.edit-btn:hover {
+  background-color: white; /* White background on hover */
+  color: #6a0dad; /* Purple text on hover */
+}
+
+/* Active effect */
+.edit-btn:active {
+  background-color: #4e007a; /* Darker purple on click */
+  transform: scale(0.95); /* Slightly reduce size on click */
+}
+
+/* Optional: Add an icon before the text */
+.edit-btn .icon {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.edit-btn {
+  background-color: #6a0dad; /* Purple background */
+  color: white; /* White text */
+  border: 2px solid #6a0dad; /* Same purple border */
+  padding: 10px 15px; /* Padding for size */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
+  cursor: pointer; /* Pointer on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Hover effect */
+.viewMore:hover {
+  background-color: white; /* White background on hover */
+  color: #6a0dad; /* Purple text on hover */
+}
+
+/* Active effect */
+.viewMore:active {
+  background-color: #4e007a; /* Darker purple on click */
+  transform: scale(0.95); /* Slightly reduce size on click */
+}
+
+/* Optional: Add an icon before the text */
+.viewMore.icon {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+/* Price Button */
+.price {
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #6a0dad; /* Same purple border */
+    padding: 5px 10px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer; /* Pointer on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.price:hover {
+    background-color: #333333; /* Darker gray on hover */
+    transform: scale(1.05); /* Slightly grow on hover */
+}
 .hamburger {
   cursor: pointer;
 }
@@ -75,7 +208,7 @@ body {
   border: 1px solid #333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin: 30px auto;
-  width: 500px;
+  width: 1400px;
   height: 400px;
 }
 
