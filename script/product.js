@@ -44,7 +44,7 @@ function filterProductsByCategory() {
   mainContent.innerHTML = '';
   filteredProducts.forEach((product) => {
     mainContent.innerHTML += `
-      <section>
+      <section class="product-cards">
         <img src="${product.imageUrl}" class="images" align="center">
         <h4 align="center">${product.name}</h4>
         <p>Price: R${product.price}</p>
